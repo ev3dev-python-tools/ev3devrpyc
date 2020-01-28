@@ -7,7 +7,7 @@ before the ev3dev2 api is loaded.
 
 Then the 'ev3devrpyc' module loads a special importer which instead of loading the ev3dev 
 modules from the simulator it proxies the ev3dev modules on a remote EV3. 
-So when doing API calls to this proxied module all these calls are forwarded to the EV3.
+So when doing API calls to this proxied module all these calls are forwarded to the EV3. The RPyC library is used to implement this proxy, hence the name ev3devrpyc.
 
 For an example see: https://github.com/ev3dev-python-tools/thonny-ev3dev/wiki/Example
 
