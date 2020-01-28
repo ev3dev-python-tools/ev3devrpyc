@@ -9,5 +9,7 @@ Then the 'ev3devrpyc' module loads a special importer which instead of loading t
 modules from the simulator it proxies the ev3dev modules on a remote EV3. 
 So when doing API calls to this proxied module all these calls are forwarded to the EV3.
 
-Note: without the ev3devrpyc the ev3dev2 package on a PC controls a simulated EV3 in the
-ev3dev2simulator.
+For an example see: https://github.com/ev3dev-python-tools/thonny-ev3dev/wiki/Example
+
+Note: normally the 'ev3dev2' package on a PC controls a simulated EV3 in the ev3dev2simulator, but by importing 
+the 'ev3devrpyc' module a special importer is installed which doesn't load the 'ev3dev2' package anymore. Instead it loads a proxy module to the ev3dev module on the EV3 itself.
