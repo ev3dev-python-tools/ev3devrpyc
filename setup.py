@@ -6,16 +6,21 @@ import sys
 setup(
       name="ev3devrpyc",
       version="1.0.0",
-      description="Transform ev3dev(2) api into a remoted proxied api using rpyc",
+      description="Library to remotely steer the EV3: using the RPyC protocol it forwards ev3dev(2) API calls from the PC to the EV3",
       long_description="""
-Transform ev3dev(2) api into a remoted proxied api using rpyc.      
-      
-When importing this module it installs a special importer into the python import infrastructure which from then
-proxies every ev3dev module when imported.     
+The ev3devrpyc package allows you to remotely steer a real EV3 from your PC.
 
-For more info: https://www.github.com/harcokuppens/thonny-ev3dev/wiki/ev3devrpyc
+You only need to import the 'ev3devrpyc' module at the beginning of your python program 
+before the ev3dev or ev3dev2 api is loaded.
+
+Then the 'ev3devrpyc' module loads a special importer which instead of loading the ev3dev 
+modules from the simulator it proxies the ev3dev(2) modules on a remote EV3. So when doing 
+API calls to this proxied module all these calls are forwarded to the EV3. The RPyC library 
+is used to implement this proxy, hence the name ev3devrpyc.
+     
+For more info: https://github.com/ev3dev-python-tools/ev3devrpyc
 """,
-      url="https://www.github.com/harcokuppens/thonny-ev3dev/wiki/ev3devrpyc",
+      url="https://github.com/ev3dev-python-tools/ev3devrpyc",
       author="Harco Kuppens",
       author_email="h.kuppens@cs.ru.nl",
       license="MIT",
