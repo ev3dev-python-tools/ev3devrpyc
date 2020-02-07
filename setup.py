@@ -5,7 +5,7 @@ import sys
 
 setup(
       name="ev3devrpyc",
-      version="1.0.0",
+      version="1.0.1",
       description="Library to remotely steer the EV3: using the RPyC protocol it forwards ev3dev(2) API calls from the PC to the EV3",
       long_description="""
 The ev3devrpyc package allows you to remotely steer a real EV3 from your PC.
